@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: microservice
+  profiles:
+    active: prod
+  config:
+    import: configserver:http://localhost:8071
