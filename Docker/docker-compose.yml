@@ -1,21 +1,24 @@
 services:
   configserver:
-    image: config-server:0.0.1-SNAPSHOT
+    image: config-server:0.0.2-SNAPSHOT
     ports:
       - "8071:8071"
+    environment:
+      ENCRYPT_KEY: "fje83Ki8403Iod87dne7Yjsl3THueh48jfuO9j4U2hf64Lo"
     networks:
       backend:
         aliases:
           - "configserver"
   microservice:
-    image: microservice:0.0.1-SNAPSHOT
+    image: microservice:0.0.2-SNAPSHOT
     environment:
       PROFILE: "dev"
       CONFIGSERVER_URI: "http://localhost:8071"
       CONFIGSERVER_PORT:   "8071"
-    depends_on:
-      configserver:
-        condition: service_started
+      ENCRYPT_KEY:       "IMSYMMETRIC"
+#    depends_on:
+#      configserver:
+#        condition: service_started
     ports:
       - "8080:8080"
     networks:
