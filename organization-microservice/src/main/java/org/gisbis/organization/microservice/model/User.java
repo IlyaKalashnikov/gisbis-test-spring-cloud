@@ -1,4 +1,4 @@
-package org.gisbis.test.microservice.model;
+package org.gisbis.organization.microservice.model;
 
 import lombok.*;
 
@@ -17,7 +17,7 @@ public class User {
     private int id;
     private String name;
     private String email;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organization_id")
     private Organization organization;
 }

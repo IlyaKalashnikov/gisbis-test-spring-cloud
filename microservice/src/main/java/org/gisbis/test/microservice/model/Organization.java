@@ -3,6 +3,7 @@ package org.gisbis.test.microservice.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -10,14 +11,13 @@ import javax.persistence.*;
 @Builder
 @Getter
 @Setter
-@Table(name = "users")
-public class User {
+@Table(name = "organizations")
+@NamedEntityGraph(name = "organization_entity_graph", attributeNodes = @NamedAttributeNode("members"))
+public class Organization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String email;
-    @ManyToOne
-    @JoinColumn(name = "organization_id")
-    private Organization organization;
+    @OneToMany (mappedBy = "organization")
+    private List<User> members;
 }

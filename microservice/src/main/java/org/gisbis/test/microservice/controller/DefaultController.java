@@ -4,9 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.gisbis.test.microservice.model.User;
 import org.gisbis.test.microservice.service.UserService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +25,10 @@ public class DefaultController {
     @GetMapping("/users")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
+    }
+
+    @GetMapping("/users/{userId}")
+    public User getUser(@PathVariable("userId") int userId){
+        return userService.getUserById(userId);
     }
 }
