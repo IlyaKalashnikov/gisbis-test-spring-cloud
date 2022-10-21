@@ -30,6 +30,7 @@
     <module>microservice</module>
     <module>eurekaserver</module>
     <module>organization-microservice</module>
+    <module>gatewayserver</module>
   </modules>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

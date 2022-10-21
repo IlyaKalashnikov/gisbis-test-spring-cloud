@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/eurekaserver/eurekaserver.iml" filepath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gatewayserver/gatewayserver.iml" filepath="$PROJECT_DIR$/gatewayserver/gatewayserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/gisbis-test-spring-cloud.iml" filepath="$PROJECT_DIR$/.idea/gisbis-test-spring-cloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice/microservice.iml" filepath="$PROJECT_DIR$/microservice/microservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/organization-microservice/organization-microservice.iml" filepath="$PROJECT_DIR$/organization-microservice/organization-microservice.iml" />
